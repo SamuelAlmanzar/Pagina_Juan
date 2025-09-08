@@ -1,8 +1,14 @@
 import React from "react";
 
+
+function scroll(e:any) { 
+  e.preventDefault()
+     const seccion = document.getElementById("habilidades");
+    seccion?.scrollIntoView({ behavior: "smooth" });
+}
 const welcome = () => {
   return (
-    <section className="flex justify-between items-center px-[13em] pr-[15em] h-screen">
+    <section  id="inicio" className="bg-[#f5f7fa] flex justify-between items-center px-[13em] pr-[15em] h-[100vh] ">
       <div className="max-w-[500px]">
         <h1 className="text-[2em] text-[#0078d7] font-bold">
           Bienvenido a Jtacell
@@ -12,8 +18,8 @@ const welcome = () => {
           pantallas, baterías, software y mucho más, con rapidez y confianza. Tu
           dispositivo en buenas manos, como nuevo otra vez.
         </p>
-        <a href="#habilidades">
-          <button className="bg-[#0078d7] border-none px-5 py-2.5 text-white rounded hover:bg-[#005a9e] mt-4 cursor-pointer transition-colors duration-300">
+        <a href="../Skills/page">
+          <button onClick={scroll} className="bg-[#0078d7] border-none px-10 py-2.5 text-white rounded hover:bg-[#005a9e] mt-4 cursor-pointer transition-colors duration-300">
             Comencemos
           </button>
         </a>
